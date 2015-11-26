@@ -1,0 +1,26 @@
+- var service_name = 'Hello there'
+extends layout
+block mainblock
+	.row
+		.col-md-6.col-md-offset-3
+			.panel.panel-primary
+				.panel-heading Update #{servicename} file
+				.panel-body
+					if error_msg
+						.alert.alert-danger(role='alert')!= error_msg
+					else if info_msg
+						.alert.alert-info(role='alert')!= info_msg
+					- var link = '/ui/update/' + _id
+					form(method='post', action= link, enctype="multipart/form-data")
+						.form-group
+							label(for='servicename') Service Name : #{servicename}
+						.form-group
+							label(for='servicefile') File input
+							input#servicefile(type='file', name='servicefile', required)
+							p.help-block Select JSON, CSV, XML file.
+						.form-group
+							.radio
+								label
+									input#optionsRadios1(type='radio', name='csv', value='csv', checked='')
+									| CSV file
+						button.btn.btn-primary(type='submit') Update Service

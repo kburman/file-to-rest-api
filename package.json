@@ -1,0 +1,21 @@
+{
+  "name": "",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Kshitij Burman",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3",
+    "fast-csv": "^0.6.0",
+    "jade": "^1.11.0",
+    "mongodb": "^1.4.39",
+    "mongoose": "^4.1.5",
+    "monk": "^1.0.1",
+    "multer": "^1.0.3",
+    "randomstring": "^1.0.8"
+  }
+}
